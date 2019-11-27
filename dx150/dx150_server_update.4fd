@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ManagedForm fileVersion="30a00" gstVersion="30a09" name="ManagedForm" uid="{213ab23f-0000-4000-93ac-4882dc52bd90}">
+  <AGSettings>
+    <DynamicProperties version="2"/>
+  </AGSettings>
+  <Record additionalTables="" joinLeft="" joinOperator="" joinRight="" name="tbl_company_list" order="" uid="{9844d54a-0000-4000-96ed-b7450c9f159c}" where="">
+    <RecordField colName="" fieldIdRef="5" name="execute_update" sqlTabName="" table_alias_name="" uid="{f2ac7daa-0000-4000-a9ab-4e88c39cedc3}"/>
+    <RecordField colName="" fieldIdRef="8" name="server" sqlTabName="" table_alias_name="" uid="{440c3e59-0000-4000-806c-3fa4760403dc}"/>
+    <RecordField colName="" fieldIdRef="11" name="Edit1" sqlTabName="" table_alias_name="" uid="{c5da0260-0000-4000-ab2d-f955535bbe5e}"/>
+    <RecordField fieldIdRef="2" name="port" uid="{3e8260ff-f5f8-4a52-a3e1-9a7cb36a5216}"/>
+    <RecordField fieldIdRef="3" name="ip" uid="{6f32890b-ffc3-4d42-9c53-3222bde73e27}"/>
+  </Record>
+  <Record additionalTables="" joinLeft="" joinOperator="" joinRight="" name="Undefined" order="" uid="{f11cc0d6-0000-4000-8e2a-7f8892060fe4}" where="">
+    <RecordField colName="" fieldIdRef="1" name="man_or_auto" sqlTabName="" table_alias_name="" uid="{1e438496-0000-4000-85c6-58586a3266cb}"/>
+    <RecordField colName="" fieldIdRef="9" name="update_process" sqlTabName="" table_alias_name="" uid="{ebf54378-0000-4000-bc29-f3d13acb72e1}"/>
+    <RecordField fieldIdRef="10" name="upd_code" uid="{c94b3115-3bb9-4668-8fd9-9e8b48d67800}"/>
+    <RecordField fieldIdRef="14" name="upd_file_spec" uid="{b46b855f-2212-4ef9-a52b-02e3a0435ff9}"/>
+    <RecordField fieldIdRef="15" name="upd_data_dict" uid="{f1d55748-9218-4662-a543-af5ad715aba4}"/>
+    <RecordField fieldIdRef="16" name="upd_etc" uid="{57bb4b81-0d58-45d1-bd20-1cb22f230558}"/>
+    <RecordField fieldIdRef="17" name="upd_pics" uid="{25d421b3-0b71-4575-abde-6f25f856534a}"/>
+    <RecordField fieldIdRef="18" name="upd_menu" uid="{32f0a8da-757a-42f2-9905-d2ba79cacb43}"/>
+    <RecordField fieldIdRef="19" name="file_name" uid="{5c0ea196-7b66-47c7-a510-7615e613e596}"/>
+    <RecordField colName="" fieldIdRef="4" name="backup_code" sqlTabName="" sqlType="CHAR" table_alias_name="" uid="{286d9571-9595-4b00-8a6a-e28a1c5f870b}"/>
+    <RecordField colName="" fieldIdRef="6" name="check_in_use" sqlTabName="" sqlType="CHAR" table_alias_name="" uid="{1ea3644c-58ac-4d9c-bb7e-4514e60583b0}"/>
+    <RecordField colName="" fieldIdRef="7" name="backup_server_db" sqlTabName="" sqlType="CHAR" table_alias_name="" uid="{77dc1456-ca1f-4612-aa35-d3cfd39142e4}"/>
+  </Record>
+  <Form fourSTFile="../../xsrce_lib/xact.4st" gridHeight="39" gridWidth="145" name="Form" text="Multi-Server Update" windowStyle="program">
+    <Grid gridHeight="38" gridWidth="140" name="Grid1" posX="0" posY="0">
+      <Label gridHeight="1" gridWidth="131" justify="center" name="lbl_title" posX="1" posY="1" sizePolicy="fixed" style="title" text="MULTI-SERVER UPDATE"/>
+      <Group gridChildrenInParent="true" gridHeight="9" gridWidth="66" name="group4" posX="1" posY="2" text="Update Selection">
+        <Label gridHeight="1" gridWidth="12" name="label1" posX="2" posY="2" text="Code:"/>
+        <CheckBox fieldId="10" gridHeight="1" gridWidth="2" name="upd_code" notNull="true" posX="16" posY="2" tabIndex="1" text="" title="checkbox1" valueChecked="Y" valueUnchecked="N" widget="CheckBox"/>
+        <Label gridHeight="1" gridWidth="12" name="label7" posX="2" posY="3" text="File Specific:"/>
+        <CheckBox fieldId="14" gridHeight="1" gridWidth="2" name="upd_file_spec" notNull="true" posX="16" posY="3" tabIndex="2" text="" title="checkbox1" valueChecked="Y" valueUnchecked="N" widget="CheckBox"/>
+        <Label gridHeight="1" gridWidth="12" name="label9" posX="2" posY="4" text="File Name:"/>
+        <Edit fieldId="19" gridHeight="1" gridWidth="10" name="file_name" posX="16" posY="4" tabIndex="3" title="edit2" widget="Edit"/>
+        <Label gridHeight="1" gridWidth="12" name="label11" posX="2" posY="6" text="Data Dictionary:"/>
+        <CheckBox fieldId="15" gridHeight="1" gridWidth="2" name="upd_data_dict" notNull="true" posX="16" posY="6" tabIndex="4" text="" title="checkbox1" valueChecked="Y" valueUnchecked="N" widget="CheckBox"/>
+        <Label gridHeight="1" gridWidth="12" name="label13" posX="27" posY="6" text="Menu Structure:"/>
+        <CheckBox fieldId="18" gridHeight="1" gridWidth="2" name="upd_menu" notNull="true" posX="41" posY="6" tabIndex="5" text="" title="checkbox1" valueChecked="Y" valueUnchecked="N" widget="CheckBox"/>
+        <Label gridHeight="1" gridWidth="12" name="label12" posX="2" posY="7" text="ETC:"/>
+        <CheckBox fieldId="16" gridHeight="1" gridWidth="2" name="upd_etc" notNull="true" posX="16" posY="7" tabIndex="6" text="" title="checkbox1" valueChecked="Y" valueUnchecked="N" widget="CheckBox"/>
+        <Label gridHeight="1" gridWidth="12" name="label14" posX="27" posY="7" text="Pictures:"/>
+        <CheckBox fieldId="17" gridHeight="1" gridWidth="2" name="upd_pics" notNull="true" posX="41" posY="7" tabIndex="7" text="" title="checkbox1" valueChecked="Y" valueUnchecked="N" widget="CheckBox"/>
+      </Group>
+      <Group gridChildrenInParent="true" gridHeight="35" gridWidth="65" name="Group3" posX="67" posY="2" text="Update Process">
+        <TextEdit aggregateColName="" aggregateName="" aggregateTableAliasName="" aggregateTableName="" colName="" fieldId="9" gridHeight="33" gridWidth="63" name="update_process" posX="1" posY="1" sqlTabName="" stretch="both" tabIndex="0" table_alias_name="" title="TextEdit1" widget="TextEdit"/>
+      </Group>
+      <Group gridChildrenInParent="true" gridHeight="21" gridWidth="66" name="Group2" posX="1" posY="11" text="Server List">
+        <Table gridHeight="19" gridWidth="64" name="tbl_company_list" posX="1" posY="1" totalRows="18">
+          <CheckBox aggregateColName="" aggregateName="" aggregateTableAliasName="" aggregateTableName="" colName="" fieldId="5" gridHeight="1" gridWidth="8" name="execute_update" notNull="true" posX="0" posY="0" sqlTabName="" tabIndex="8" table_alias_name="" title="Execute" valueChecked="Y" valueUnchecked="N" widget="CheckBox"/>
+          <Edit aggregateColName="" aggregateName="" aggregateTableAliasName="" aggregateTableName="" colName="" fieldId="8" gridHeight="1" gridWidth="35" name="server" posX="8" posY="0" sqlTabName="" tabIndex="0" table_alias_name="" title="Server to Execute Update" widget="Edit"/>
+          <Phantom fieldId="2" name="port" widget="Phantom"/>
+          <Phantom fieldId="3" name="ip" widget="Phantom"/>
+          <FFImage aggregateColName="" aggregateName="" aggregateTableAliasName="" aggregateTableName="" colName="" fieldId="11" gridHeight="1" gridWidth="8" name="Edit1" posX="43" posY="0" sqlTabName="" table_alias_name="" title="Complete" widget="FFImage"/>
+        </Table>
+      </Group>
+      <Group gridChildrenInParent="true" gridHeight="5" gridWidth="66" name="Group1" posX="1" posY="32" text="Execute Update">
+        <Label gridHeight="1" gridWidth="13" name="Label2" posX="1" posY="1" text="Time for Update:"/>
+        <ComboBox aggregateColName="" aggregateName="" aggregateTableAliasName="" aggregateTableName="" colName="" fieldId="1" gridHeight="1" gridWidth="12" items="" name="man_or_auto" notNull="true" posX="15" posY="1" sqlTabName="" sqlType="CHAR" tabIndex="9" table_alias_name="" tag="man_or_auto" title="ComboBox1" widget="ComboBox"/>
+        <Label gridHeight="1" gridWidth="13" name="label4" posX="34" posY="1" text="Check In Use:"/>
+        <ComboBox aggregateColName="" aggregateName="" aggregateTableAliasName="" aggregateTableName="" colName="" fieldId="6" gridHeight="1" gridWidth="12" items="" name="check_in_use" notNull="true" posX="48" posY="1" sqlTabName="" sqlType="CHAR" tabIndex="12" table_alias_name="" tag="check_in_use" title="ComboBox1" widget="ComboBox"/>
+        <Label gridHeight="1" gridWidth="13" name="label5" posX="1" posY="2" text="Backup Server DB:"/>
+        <ComboBox aggregateColName="" aggregateName="" aggregateTableAliasName="" aggregateTableName="" colName="" fieldId="7" gridHeight="1" gridWidth="12" items="" name="backup_server_db" notNull="true" posX="15" posY="2" sqlTabName="" sqlType="CHAR" tabIndex="10" table_alias_name="" tag="backup_server_db" title="ComboBox1" widget="ComboBox"/>
+        <Label gridHeight="1" gridWidth="13" name="label3" posX="1" posY="3" text="Backup Code:"/>
+        <ComboBox aggregateColName="" aggregateName="" aggregateTableAliasName="" aggregateTableName="" colName="" fieldId="4" gridHeight="1" gridWidth="12" items="" name="backup_code" notNull="true" posX="15" posY="3" sqlTabName="" sqlType="CHAR" tabIndex="11" table_alias_name="" tag="backup_code" title="ComboBox1" widget="ComboBox"/>
+      </Group>
+    </Grid>
+  </Form>
+  <DiagramLayout>
+    <![CDATA[AAAAAgAAAEwAewBmADEAMQBjAGMAMABkADYALQAwADAAMAAwAC0ANAAwADAAMAAtADgAZQAyAGEALQA3AGYAOAA4ADkAMgAwADYAMABmAGUANAB9AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAEwAewA5ADgANAA0AGQANQA0AGEALQAwADAAMAAwAC0ANAAwADAAMAAtADkANgBlAGQALQBiADcANAA1ADAAYwA5AGYAMQA1ADkAYwB9QCqqquAAAChAKqqq4AAAKAAAAAAAAAAAAQ==]]>
+  </DiagramLayout>
+</ManagedForm>

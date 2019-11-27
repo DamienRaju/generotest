@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ManagedForm databaseName="xactdev" fileVersion="30a00" gstVersion="30a09" name="managedform" uid="{d99d2fa0-dd60-496e-956a-618d8cd692e9}">
+  <AGSettings>
+    <DynamicProperties version="2"/>
+  </AGSettings>
+  <Record additionalTables="" joinLeft="" joinOperator="" joinRight="" name="mr_dx01s" order="" uid="{c2f9195e-c443-4ab6-bc6c-73ab08c07ed7}" where="">
+    <RecordField colName="server" fieldIdRef="1" fieldType="TABLE_COLUMN" name="dx01s_server_mast.server" sqlTabName="dx01s_server_mast" table_alias_name="" uid="{56933657-6d7e-4367-8415-189802eb58b1}"/>
+    <RecordField colName="port" fieldIdRef="2" fieldType="TABLE_COLUMN" name="dx01s_server_mast.port" sqlTabName="dx01s_server_mast" table_alias_name="" uid="{d4967ba0-4a14-418a-87c0-8d6167663836}"/>
+    <RecordField colName="ip" fieldIdRef="3" fieldType="TABLE_COLUMN" name="dx01s_server_mast.ip" sqlTabName="dx01s_server_mast" table_alias_name="" uid="{36ab1ca7-a28e-4e8f-99b1-f48624b075f6}"/>
+  </Record>
+  <Record name="tbl_db" uid="{2ca8e3fb-64a5-4b8d-ba1c-d832eabbbcc6}">
+    <RecordField colName="server" fieldIdRef="5" fieldType="TABLE_COLUMN" name="dx01d_db_mast.server" sqlTabName="dx01d_db_mast" uid="{16e6e74c-f254-40c3-bbe3-97fb647734ab}"/>
+    <RecordField colName="db" fieldIdRef="4" fieldType="TABLE_COLUMN" name="dx01d_db_mast.db" sqlTabName="dx01d_db_mast" uid="{35b6b642-cf07-4378-b56f-825bccc6eaf0}"/>
+  </Record>
+  <Form fourSTFile="../../../etc/xact.4st" gridHeight="24" gridWidth="45" minHeight="0" minWidth="0" name="form" text="Server Maintenance" windowStyle="program">
+    <Grid gridHeight="18" gridWidth="44" name="grid1" posX="0" posY="0">
+      <Label gridHeight="1" gridWidth="42" justify="center" name="lb01" posX="1" posY="1" style="title" text="SERVER MAINTENANCE"/>
+      <Group gridChildrenInParent="false" gridHeight="7" gridWidth="42" name="grp_dx01s" posX="1" posY="2" text="Server Details">
+        <Label gridHeight="1" gridWidth="13" name="label1" posX="2" posY="1" text="Server:">
+          <Initializer text="dbschema:st14_import_levies.levy_code/@label"/>
+        </Label>
+        <Edit aggregateColName="" aggregateName="" aggregateTableAliasName="" aggregateTableName="" case="upper" colName="server" fieldId="1" fieldType="TABLE_COLUMN" gridHeight="1" gridWidth="25" name="dx01s_server_mast.server" posX="16" posY="1" scroll="true" sqlTabName="dx01s_server_mast" tabIndex="1" title="levy_code" widget="Edit">
+          <Initializer title="dbschema:$(sqlTabName).$(colName)/@label"/>
+        </Edit>
+        <Label gridHeight="1" gridWidth="39" name="lb03" posX="2" posY="2" text=""/>
+        <Label gridHeight="1" gridWidth="13" name="label2" posX="2" posY="3" text="Port Number:">
+          <Initializer text="dbschema:st14_import_levies.levy_desc/@label"/>
+        </Label>
+        <Edit aggregateColName="" aggregateName="" aggregateTableAliasName="" aggregateTableName="" colName="port" fieldId="2" fieldType="TABLE_COLUMN" gridHeight="1" gridWidth="25" name="dx01s_server_mast.port" posX="16" posY="3" scroll="true" sqlTabName="dx01s_server_mast" tabIndex="2" title="levy_desc" widget="Edit">
+          <Initializer title="dbschema:$(sqlTabName).$(colName)/@label"/>
+        </Edit>
+        <Label gridHeight="1" gridWidth="39" name="lb05" posX="2" posY="4" text=""/>
+        <Label gridHeight="1" gridWidth="13" name="label3" posX="2" posY="5" text="IP:">
+          <Initializer text="dbschema:st14_import_levies.uom/@label"/>
+        </Label>
+        <Edit aggregateColName="" aggregateName="" aggregateTableAliasName="" aggregateTableName="" case="none" colName="ip" fieldId="3" fieldType="TABLE_COLUMN" gridHeight="1" gridWidth="25" name="dx01s_server_mast.ip" posX="16" posY="5" scroll="true" sqlTabName="dx01s_server_mast" tabIndex="3" title="uom" widget="Edit">
+          <Initializer title="dbschema:$(sqlTabName).$(colName)/@label"/>
+        </Edit>
+      </Group>
+      <Group gridChildrenInParent="false" gridHeight="8" gridWidth="42" name="grp_dx01d" posX="1" posY="10" text="Database Details">
+        <Table gridHeight="6" gridWidth="40" name="tbl_db" posX="1" posY="1" totalRows="5">
+          <Phantom colName="server" fieldId="5" fieldType="TABLE_COLUMN" name="dx01d_db_mast.server" sqlTabName="dx01d_db_mast" widget="Phantom"/>
+          <Edit colName="db" fieldId="4" fieldType="TABLE_COLUMN" gridHeight="1" gridWidth="15" name="dx01d_db_mast.db" posX="0" posY="0" sqlTabName="dx01d_db_mast" tabIndex="4" title="Database" widget="Edit"/>
+        </Table>
+      </Group>
+    </Grid>
+  </Form>
+  <DiagramLayout>
+    <![CDATA[AAAAAgAAAEwAewBjADIAZgA5ADEAOQA1AGUALQBjADQANAAzAC0ANABhAGIANgAtAGIAYwA2AGMALQA3ADMAYQBiADAAOABjADAANwBlAGQANwB9wIcwAAAAAADAOgAAAAAAAD90euFHrhR7AQAAAEwAewAyAGMAYQA4AGUAMwBmAGIALQA2ADQAYQA1AC0ANABiADgAZAAtAGIAYQAxAGMALQBkADgAMwAyAGUAYQBiAGIAYgBjAGMANgB9wHywAAAAAABAIAAAAAAAAD9wYk3S8an8AQ==]]>
+  </DiagramLayout>
+</ManagedForm>
