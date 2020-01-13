@@ -1,8 +1,5 @@
---ANOTHER NEW CHANGE
-
---HERE I AM TESTING OUT SOME NEW CHANGES
-
---DOING SOME IMPORTANT WORK1
+--Testing GIT integration
+--Test 2
 
 ------------------------------------------------------------------------------------------------------------------------------------
 #+ Server Maintenance
